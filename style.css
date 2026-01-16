@@ -1,259 +1,199 @@
 /* --- GENEL AYARLAR --- */
 :root {
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.5);
-    --text-primary: #2d3436;
-    --text-secondary: #636e72;
+    --bg-color: #f9f9f9; /* Çok açık gri (Neredeyse beyaz) */
+    --text-color: #333;
+    --accent-color: #000; /* Vurgu rengi simsiyah */
+    --card-bg: #fff;
 }
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif; /* Okunaklı modern font */
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
-    color: var(--text-primary);
-    background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-    min-height: 100vh;
-    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- MENÜ --- */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 30px 10%;
+    background-color: var(--bg-color);
 }
 
-/* --- HAREKETLİ ARKA PLAN (BLOBS) --- */
-.background-blobs {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.blob {
-    position: absolute;
-    filter: blur(80px);
-    opacity: 0.6;
-    animation: move 20s infinite alternate;
-}
-
-.blob-1 {
-    top: -10%;
-    left: -10%;
-    width: 500px;
-    height: 500px;
-    background: #ff9a9e;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-}
-
-.blob-2 {
-    bottom: -10%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: #a18cd1;
-    animation-delay: -5s;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-.blob-3 {
-    top: 40%;
-    left: 40%;
-    width: 400px;
-    height: 400px;
-    background: #fad0c4;
-    animation-delay: -10s;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-@keyframes move {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(100px, 50px) rotate(360deg); }
-}
-
-/* --- ANA KAPSAYICI (CAM PANEL) --- */
-.glass-container {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px); /* BUZLU CAM EFEKTİ */
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 30px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    overflow: hidden;
-}
-
-/* --- SOL MENÜ (SIDEBAR) --- */
-.sidebar {
-    width: 35%;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid rgba(255,255,255,0.3);
-}
-
-.brand-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin: 0;
-    line-height: 1;
-    background: -webkit-linear-gradient(45deg, #2d3436, #636e72);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.tagline {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-top: 10px;
-}
-
-.bio {
-    margin-top: 30px;
-    line-height: 1.8;
-    font-weight: 300;
+.logo {
+    font-family: 'Cinzel', serif; /* Başlık fontu */
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
 }
 
 .nav-links {
-    margin-top: 50px;
+    list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-primary);
-    font-weight: bold;
+    color: #555;
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s;
-    position: relative;
+    letter-spacing: 1px;
+    transition: color 0.3s;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--text-primary);
-    transition: width 0.3s;
+.nav-links a:hover, .nav-links a.active {
+    color: #000;
+    font-weight: bold;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+/* --- HERO (GİRİŞ) ALANI --- */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* --- SAĞ TARAF (GALERİ AKIŞI) --- */
-.gallery-feed {
-    width: 65%;
-    padding: 60px;
-    overflow-y: auto; /* Kaydırma çubuğu */
-    scroll-behavior: smooth;
+.hero-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #000;
 }
 
-/* Kaydırma çubuğunu gizle/güzelleştir */
-.gallery-feed::-webkit-scrollbar {
-    width: 8px;
-}
-.gallery-feed::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.1);
-    border-radius: 10px;
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
-.art-card {
-    margin-bottom: 60px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+.description {
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #000;
+}
+
+/* --- GALERİ IZGARASI --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Otomatik hizalama */
+    gap: 40px;
+    padding: 20px 10%;
+    margin-bottom: 80px;
+}
+
+/* --- KART TASARIMI --- */
+.card {
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Çok hafif gölge */
     transition: transform 0.3s ease;
-}
-
-.art-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.6);
-}
-
-.image-wrapper {
-    width: 100%;
-    height: 400px;
+    border-radius: 0; /* Köşeli, modern duruş */
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.image-wrapper img {
+.card:hover {
+    transform: translateY(-10px); /* Havalanma efekti */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.art-card:hover img {
-    transform: scale(1.05); /* Resim hafifçe büyür */
+.card:hover .card-image img {
+    transform: scale(1.05); /* Resim yakınlaşır */
 }
 
-.card-details {
-    padding-top: 25px;
+.card-content {
+    padding: 25px;
     text-align: center;
 }
 
-.category {
-    font-size: 0.75rem;
+.date {
+    font-size: 0.8rem;
+    color: #999;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #a29bfe;
-    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.card-details h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+.card-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
     margin: 10px 0;
-    color: #2d3436;
+    color: #000;
 }
 
-.card-details p {
-    font-weight: 300;
-    color: #636e72;
-    max-width: 80%;
-    margin: 0 auto;
+.card-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-/* --- MOBİL UYUMLULUK --- */
-@media (max-width: 900px) {
-    .glass-container {
+.read-more {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    transition: opacity 0.3s;
+}
+
+.read-more:hover {
+    opacity: 0.7;
+}
+
+/* --- ALT BİLGİ --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* --- MOBİL İÇİN --- */
+@media (max-width: 768px) {
+    .navbar {
         flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-        width: 100%;
-        border-radius: 0;
-        border: none;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 40px 20px;
-        text-align: center;
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-
-    .nav-links {
-        justify-content: center;
-    }
-
-    .gallery-feed {
-        width: 100%;
+        gap: 20px;
         padding: 20px;
-        overflow: visible;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
     }
 }
