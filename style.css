@@ -1,199 +1,72 @@
-/* --- GENEL AYARLAR --- */
-:root {
-    --bg-color: #f9f9f9; /* Çok açık gri (Neredeyse beyaz) */
-    --text-color: #333;
-    --accent-color: #000; /* Vurgu rengi simsiyah */
-    --card-bg: #fff;
-}
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Lato', sans-serif; /* Okunaklı modern font */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-/* --- MENÜ --- */
-.navbar {
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
-    background-color: var(--bg-color);
+    gap: 60px;
 }
 
-.logo {
-    font-family: 'Cinzel', serif; /* Başlık fontu */
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: #000;
-    font-weight: bold;
-}
-
-/* --- HERO (GİRİŞ) ALANI --- */
-.hero-section {
-    text-align: center;
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-section h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.description {
-    font-size: 1rem;
-    color: #444;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-}
-
-.social-icons a {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 0 10px;
-    transition: transform 0.3s;
-    display: inline-block;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
-    color: #000;
-}
-
-/* --- GALERİ IZGARASI --- */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Otomatik hizalama */
-    gap: 40px;
-    padding: 20px 10%;
-    margin-bottom: 80px;
-}
-
-/* --- KART TASARIMI --- */
-.card {
-    background: var(--card-bg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Çok hafif gölge */
-    transition: transform 0.3s ease;
-    border-radius: 0; /* Köşeli, modern duruş */
+.about-image {
+    flex: 1;
+    height: 500px;
     overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-10px); /* Havalanma efekti */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.card-image {
-    height: 250px;
-    overflow: hidden;
-}
-
-.card-image img {
+.about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
 }
 
-.card:hover .card-image img {
-    transform: scale(1.05); /* Resim yakınlaşır */
+.about-image:hover img {
+    filter: grayscale(0%);
 }
 
-.card-content {
-    padding: 25px;
-    text-align: center;
+.about-text {
+    flex: 1;
 }
 
-.date {
-    font-size: 0.8rem;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.card-content h2 {
+.about-text h1 {
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    margin: 10px 0;
+    font-size: 2.5rem;
     color: #000;
-}
-
-.card-content p {
-    font-size: 0.95rem;
-    color: #666;
     margin-bottom: 20px;
 }
 
-.read-more {
-    text-decoration: none;
-    color: #000;
+.about-text p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-text .intro {
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 0.9rem;
-    border-bottom: 1px solid #000;
-    padding-bottom: 2px;
-    transition: opacity 0.3s;
+    color: #333;
+    font-style: italic;
 }
 
-.read-more:hover {
-    opacity: 0.7;
+.signature {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    text-align: right;
+    color: #000;
+    letter-spacing: 2px;
 }
 
-/* --- ALT BİLGİ --- */
-footer {
-    text-align: center;
-    padding: 40px;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-/* --- MOBİL İÇİN --- */
 @media (max-width: 768px) {
-    .navbar {
+    .about-container {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+        gap: 30px;
     }
-    
-    .hero-section h1 {
-        font-size: 2rem;
+    .about-image {
+        height: 300px;
+        width: 100%;
     }
 }
