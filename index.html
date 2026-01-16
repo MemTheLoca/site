@@ -3,85 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemTheLoca | Mühendislik Notları</title>
+    <title>root@memtheloca:~#</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-content">
-            <h1 class="logo">&lt;MemTheLoca /&gt;</h1>
-            <div class="socials">
-                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:mail@gmail.com"><i class="fas fa-envelope"></i></a>
+    <div class="terminal-window">
+        
+        <div class="command-line">
+            <span class="user">root@memtheloca</span>:<span class="path">~</span>$ <span class="command">./init_profile.sh</span>
+        </div>
+
+        <div class="output">
+            <p>> KERNEL: Yüklendi...</p>
+            <p>> KULLANICI: Ensar (Elektrik-Elektronik Müh. Öğrencisi)</p>
+            <p>> KONUM: Türkiye</p>
+            <p>> DURUM: Kod yazıyor... <span class="blink">_</span></p>
+        </div>
+
+        <br>
+
+        <div class="command-line">
+            <span class="user">root@memtheloca</span>:<span class="path">~/menu</span>$ <span class="command">ls -la</span>
+        </div>
+        
+        <ul class="file-list">
+            <li><a href="https://github.com" target="_blank">[FILE] github_profile.link</a></li>
+            <li><a href="mailto:mail@gmail.com">[FILE] contact_me.txt</a></li>
+        </ul>
+
+        <br>
+        <hr class="dashed">
+        <br>
+
+        <div class="log-entry">
+            <div class="log-header">
+                <span class="timestamp">[2026-01-16 14:30]</span> 
+                <span class="process">EXECUTING: yilan_oyunu.c</span>
+            </div>
+            <div class="log-content">
+                <p>C dili ile klasik yılan oyunu algoritması tamamlandı. Pointer hataları giderildi.</p>
+                <img src="https://via.placeholder.com/600x300/000000/00ff00?text=GAME+SCREENSHOT" alt="Proje 1">
+                <br>
+                <a href="#" class="execute-btn">>> ./kodu_incele</a>
             </div>
         </div>
-    </nav>
 
-    <div class="container">
-        
-        <header class="hero">
-            <h2>Silav</h2>
-            <p>Li Hevîya Afirandina Rengan im.</p>
-            <p>Systemên Çandî ᴶᵘˢᵗ ᶠᵘᶜᵏ ᵗʰᵉ ˢʸˢᵗᵉᵐ With C/C++</p>
-            <p>Qehwe û Biskewêt</p>
-        </header>
+        <br>
 
-        <div class="feed">
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="tag elektronik">Elektronik</span>
-                    <span class="date">16 Ocak 2026</span>
+        <div class="log-entry">
+            <div class="log-header">
+                <span class="timestamp">[2026-01-15 09:15]</span> 
+                <span class="process">SYSTEM: arduino_sulama_sistemi</span>
+            </div>
+            <div class="log-content">
+                <p>Otomatik saksı sulama projesi devreye alındı. Röle tetikleme sorunu çözüldü.</p>
+                <div class="code-block">
+                    void loop() {<br>
+                    &nbsp;&nbsp;if(nem < 300) digitalWrite(role, HIGH);<br>
+                    }
                 </div>
-                <img src="https://via.placeholder.com/800x400" alt="Proje Resmi" class="post-img">
-                
-                <div class="card-body">
-                    <h3>Arduino ile Akıllı Saksı Projesi</h3>
-                    <p>Bugün nem sensörü kullanarak toprağın kuruduğunu anlayan ve otomatik su veren bir devre tasarladım. Röle kontrolü için transistör kullandım.</p>
-                    <a href="#" class="btn">Devamını Oku</a>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="tag yazilim">C Dili</span>
-                    <span class="date">15 Ocak 2026</span>
-                </div>
-                
-                <div class="card-body">
-                    <h3>Pointer Mantığını Anlamak</h3>
-                    <p>C programlamada işaretçiler (pointers) bellekteki adresleri tutar. İşte basit bir örnek:</p>
-                    
-                    <pre><code>
-int main() {
-    int sayi = 10;
-    int *ptr = &sayi;
-    printf("Adres: %p", ptr);
-    return 0;
-}
-                    </code></pre>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <span class="tag genel">Günlük</span>
-                    <span class="date">10 Ocak 2026</span>
-                </div>
-                <div class="card-body">
-                    <h3>Vize Dönemi Bitti!</h3>
-                    <p>Zorlu bir sınav haftasıydı özellikle Devre Analizi dersi epey terletti ama atlattık. Şimdi projelere odaklanma zamanı. Yakında yeni PCB çizimleri gelecek.</p>
-                </div>
-            </article>
-
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <p>Copyright © 2026 MemTheLoca | Code is Poetry</p>
-    </footer>
+        <br>
+        
+        <div class="command-line">
+            <span class="user">root@memtheloca</span>:<span class="path">~</span>$ <span class="blink">_</span>
+        </div>
+
+    </div>
 
 </body>
 </html>
