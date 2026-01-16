@@ -1,160 +1,99 @@
+/* RETRO TERMİNAL STİLİ */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
 body {
-    background-color: #121212; 
-    color: #e0e0e0; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d; /* Neredeyse siyah */
+    color: #33ff00; /* Klasik Terminal Yeşili */
+    font-family: 'Fira Code', 'Courier New', monospace; /* Kod fontu */
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-
-.navbar {
-    background-color: #1e1e1e;
-    padding: 15px 0;
-    border-bottom: 2px solid #00adb5; 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-content {
+/* ANA KUTU */
+.terminal-window {
     max-width: 800px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo {
-    color: #00adb5;
-    font-size: 1.5rem;
-    margin: 0;
-    font-family: 'Courier New', monospace; 
-}
-
-.socials a {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-left: 15px;
-    transition: color 0.3s;
-}
-
-.socials a:hover {
-    color: #00adb5;
-}
-
-
-.container {
-    max-width: 800px; 
-    margin: 0 auto;
+    border: 2px solid #33ff00; /* Çerçeve */
     padding: 20px;
+    box-shadow: 0 0 20px rgba(51, 255, 0, 0.2); /* Yeşil Parlama Efekti */
+    min-height: 90vh;
 }
 
-.hero {
-    text-align: center;
-    padding: 40px 0;
-    border-bottom: 1px solid #333;
-    margin-bottom: 40px;
+/* BAĞLANTILAR */
+a {
+    color: #33ff00;
+    text-decoration: none;
+    border-bottom: 1px dashed #33ff00;
 }
 
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+a:hover {
+    background-color: #33ff00;
+    color: #000; /* Üzerine gelince renkler ters döner */
 }
 
-.hero p {
-    color: #888;
-    max-width: 600px;
-    margin: 0 auto;
-}
+/* KOMUT SATIRI RENKLERİ */
+.user { color: #ff0055; font-weight: bold; } /* Kullanıcı adı kırmızı/pembe */
+.path { color: #00ccff; } /* Klasör yolu mavi */
+.command { color: #fff; font-weight: bold; } /* Komut beyaz */
 
-.card {
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    overflow: hidden; 
-    margin-bottom: 40px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border: 1px solid #333;
-}
-
-.post-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 1px solid #333;
-}
-
-.card-header {
-    padding: 20px 20px 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-}
-
-.card-body {
-    padding: 0 20px 20px 20px;
-}
-
-.card-body h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.card-body p {
-    color: #bbb;
-}
-
-.tag {
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.8rem;
+/* YANIP SÖNEN İMLEÇ */
+.blink {
+    animation: blinker 1s linear infinite;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-.tag.elektronik { background-color: #d63031; color: white; } 
-.tag.yazilim { background-color: #0984e3; color: white; }    
-.tag.genel { background-color: #6c5ce7; color: white; }     
-
-.date {
-    color: #666;
+@keyframes blinker {
+    50% { opacity: 0; }
 }
 
-pre {
+/* AYIRAÇ */
+.dashed {
+    border: 0;
+    border-top: 1px dashed #335500;
+}
+
+/* LOG / PROJE GİRİŞLERİ */
+.log-entry {
+    margin-bottom: 30px;
+    border-left: 2px solid #335500;
+    padding-left: 15px;
+}
+
+.timestamp { color: #888; }
+.process { color: #fff; font-weight: bold; }
+
+.log-content img {
+    max-width: 100%;
+    border: 1px solid #33ff00;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.log-content img:hover {
+    opacity: 1;
+}
+
+/* KOD BLOĞU */
+.code-block {
     background-color: #111;
-    padding: 15px;
-    border-radius: 6px;
-    border-left: 4px solid #00adb5;
-    overflow-x: auto;
+    border: 1px solid #335500;
+    padding: 10px;
+    color: #ddd;
+    font-size: 0.9rem;
+    margin-top: 10px;
     font-family: 'Courier New', monospace;
-    color: #a6e22e; 
-    margin-top: 15px;
 }
 
-.btn {
+.execute-btn {
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none;
-    color: #00adb5;
     font-weight: bold;
-    border: 1px solid #00adb5;
-    padding: 8px 20px;
-    border-radius: 20px;
-    transition: all 0.3s;
 }
 
-.btn:hover {
-    background-color: #00adb5;
-    color: #121212;
-}
-
-footer {
-    text-align: center;
-    color: #555;
-    padding: 40px 0;
-    font-size: 0.9rem;
+/* MOBİL UYUM */
+@media (max-width: 600px) {
+    body { padding: 10px; font-size: 14px; }
+    .terminal-window { border: none; padding: 0; box-shadow: none; }
 }
