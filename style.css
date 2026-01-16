@@ -1,0 +1,138 @@
+/*ayarlar */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*profil */
+.profile-container {
+    max-width: 935px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 2px solid #333;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verified-icon {
+    color: #0095f6;
+    font-size: 18px;
+}
+
+.profile-info .title {
+    color: #8e8e8e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-info .bio {
+    line-height: 1.5;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #363636;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+/* çizgi */
+.divider {
+    border: none;
+    border-top: 1px solid #363636;
+    margin-bottom: 30px;
+}
+
+/* galeri-tutuş */
+.gallery-container {
+    max-width: 935px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 28px; 
+    padding: 0 20px;
+}
+
+/* telefon-tablet (mobil) */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 10px;
+    }
+}
+
+/* postlar ve efektler */
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* siyah perde */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #555;
+    padding: 20px;
+    font-size: 12px;
+}
