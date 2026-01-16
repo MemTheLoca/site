@@ -1,78 +1,84 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="ku">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemTheLoca | Visual Diary</title>
+    <title>MemTheLoca | Portfolyo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
+    <nav class="navbar">
+        <div class="logo">MEMTHELOCA</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Mal (Ana Sayfa)</a></li>
+            <li><a href="#">Proje (Projeler)</a></li>
+            <li><a href="#">Derbar (Hakkımda)</a></li>
+            <li><a href="mailto:mail@gmail.com">Peywendî (İletişim)</a></li>
+        </ul>
+    </nav>
 
-    <div class="glass-container">
+    <header class="hero-section">
+        <h1>Silav, Navê Min Ensar e.</h1>
+        <p class="subtitle">Xwendekarê Endezyariya Elektrîk û Elektronîkê</p>
+        <p class="description">
+            Ez li vir proje, kod û ramanên xwe parve dikim. 
+            Teknolojî, huner û jiyan di yek cihî de.
+        </p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <main class="gallery-grid">
         
-        <aside class="sidebar">
-            <div class="profile-content">
-                <h1 class="brand-name">MemTheLoca</h1>
-                <p class="tagline">Estetik. Minimalizm. Perspektif.</p>
-                <p class="bio">
-                    Dünyayı kendi objektifimden yorumluyorum. 
-                    Burada teknik detaylar yok, sadece hisler ve görüntüler var.
-                </p>
-                
-                <nav class="nav-links">
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
-                    <a href="https://twitter.com" target="_blank">Twitter</a>
-                    <a href="mailto:mail@gmail.com">Contact</a>
-                </nav>
+        <article class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sîber Ewlehî">
             </div>
-        </aside>
+            <div class="card-content">
+                <span class="date">16 Çile 2026</span>
+                <h2>Sîber Ewlehî û Kod</h2>
+                <p>Di cîhana dîjîtal de parastina daneyan gelek girîng e. Min îro li ser vê yekê xebatek kir.</p>
+                <a href="#" class="read-more">Zêdetir Bixwîne &rarr;</a>
+            </div>
+        </article>
 
-        <main class="gallery-feed">
-            
-            <article class="art-card">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1493514789931-5f7514749199?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sanat 1">
-                </div>
-                <div class="card-details">
-                    <span class="category">Şehir & Işık</span>
-                    <h2>Gece Yürüyüşleri</h2>
-                    <p>Şehrin gürültüsü sustuğunda, ışıkların dansı başlar. İstanbul sokaklarında kaybolduğum o an.</p>
-                </div>
-            </article>
+        <article class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Elektronîk">
+            </div>
+            <div class="card-content">
+                <span class="date">14 Çile 2026</span>
+                <h2>Devreya Arduino</h2>
+                <p>Projeya min a nû ya otomasyonê. Min senzorên nû ceriband û encamên baş girt.</p>
+                <a href="#" class="read-more">Zêdetir Bixwîne &rarr;</a>
+            </div>
+        </article>
 
-            <article class="art-card">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sanat 2">
-                </div>
-                <div class="card-details">
-                    <span class="category">Doğa & Sessizlik</span>
-                    <h2>Mavinin Tonları</h2>
-                    <p>Denizin gökyüzüyle birleştiği o ince çizgi. Huzurun en saf hali.</p>
-                </div>
-            </article>
+        <article class="card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1461301214746-1e790926d323?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mîmarî">
+            </div>
+            <div class="card-content">
+                <span class="date">10 Çile 2026</span>
+                <h2>Mîmarî û Huner</h2>
+                <p>Carinan divê mirov ji koda dûr bikeve û li bedewiya bajêr binêre.</p>
+                <a href="#" class="read-more">Zêdetir Bixwîne &rarr;</a>
+            </div>
+        </article>
 
-            <article class="art-card">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1515405295579-ba7b454989cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sanat 3">
-                </div>
-                <div class="card-details">
-                    <span class="category">Soyut</span>
-                    <h2>Düşünceler</h2>
-                    <p>Karmaşık ama bir o kadar da düzenli. Tıpkı hayat gibi.</p>
-                </div>
-            </article>
+    </main>
 
-        </main>
-    </div>
+    <footer>
+        <p>&copy; 2026 MemTheLoca | Hemû maf parastî ne.</p>
+    </footer>
 
 </body>
 </html>
