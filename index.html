@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemTheLoca</title>
+    <title>MemTheLoca | Mühendislik Notları</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="profile-container">
-        <div class="profile-photo">
-            <img src="https://via.placeholder.com/150" alt="Profil Fotosu">
-        </div>
-        
-        <div class="profile-info">
-            <h1>MemTheLoca <i class="fas fa-check-circle verified-icon"></i></h1>
-            <p class="title">Hêvîya afirandin a rengan.</p>
-            <p class="bio">
-                ☕ Qehwe û Piskewêt.<br>
-                💻 C/C++ Sîstemên Çandî. ᴶᵘˢᵗ ᶠᵘᶜᵏ ᵗʰᵉ ˢʸˢᵗᵉᵐ<br>
-                📍 Welat
-            </p>
-            <div class="social-links">
-                <a href="https://github.com/kullaniciadin" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:mailin@gmail.com"><i class="fas fa-envelope"></i> İletişim</a>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">&lt;MemTheLoca /&gt;</h1>
+            <div class="socials">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:mail@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <hr class="divider">
-
-    <main class="gallery-container">
+    <div class="container">
         
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/400x400" alt="Proje 1">
-            <div class="overlay">
-                <div class="text">Mahr a Himwelatî.</div>
-            </div>
-        </div>
+        <header class="hero">
+            <h2>Silav</h2>
+            <p>Li Hevîya Afirandina Rengan im.</p>
+            <p>Systemên Çandî ᴶᵘˢᵗ ᶠᵘᶜᵏ ᵗʰᵉ ˢʸˢᵗᵉᵐ With C/C++</p>
+            <p>Qehwe û Biskewêt</p>
+        </header>
 
-        </main>
+        <div class="feed">
+
+            <article class="card">
+                <div class="card-header">
+                    <span class="tag elektronik">Elektronik</span>
+                    <span class="date">16 Ocak 2026</span>
+                </div>
+                <img src="https://via.placeholder.com/800x400" alt="Proje Resmi" class="post-img">
+                
+                <div class="card-body">
+                    <h3>Arduino ile Akıllı Saksı Projesi</h3>
+                    <p>Bugün nem sensörü kullanarak toprağın kuruduğunu anlayan ve otomatik su veren bir devre tasarladım. Röle kontrolü için transistör kullandım.</p>
+                    <a href="#" class="btn">Devamını Oku</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <span class="tag yazilim">C Dili</span>
+                    <span class="date">15 Ocak 2026</span>
+                </div>
+                
+                <div class="card-body">
+                    <h3>Pointer Mantığını Anlamak</h3>
+                    <p>C programlamada işaretçiler (pointers) bellekteki adresleri tutar. İşte basit bir örnek:</p>
+                    
+                    <pre><code>
+int main() {
+    int sayi = 10;
+    int *ptr = &sayi;
+    printf("Adres: %p", ptr);
+    return 0;
+}
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-header">
+                    <span class="tag genel">Günlük</span>
+                    <span class="date">10 Ocak 2026</span>
+                </div>
+                <div class="card-body">
+                    <h3>Vize Dönemi Bitti!</h3>
+                    <p>Zorlu bir sınav haftasıydı özellikle Devre Analizi dersi epey terletti ama atlattık. Şimdi projelere odaklanma zamanı. Yakında yeni PCB çizimleri gelecek.</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; MemTheLoca</p>
+        <p>Copyright © 2026 MemTheLoca | Code is Poetry</p>
     </footer>
 
 </body>
