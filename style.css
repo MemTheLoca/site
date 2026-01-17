@@ -264,7 +264,6 @@ footer {
         height: 300px;
         width: 100%;
 
-        /* --- POST DETAY SAYFASI (PARVEKIRIN) --- */
 .post-container {
     max-width: 800px;
     margin: 0 auto;
@@ -274,7 +273,7 @@ footer {
 
 .post-header {
     width: 100%;
-    height: 500px; /* Buyuk kapak resmi */
+    height: 500px; 
     overflow: hidden;
 }
 
@@ -287,7 +286,7 @@ footer {
 .post-content {
     padding: 40px 20px;
     max-width: 650px;
-    margin: -60px auto 0 auto; /* Resmi biraz yukari bindirir */
+    margin: -60px auto 0 auto;
     background: #fff;
     position: relative;
     text-align: center;
@@ -319,7 +318,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.9;
     color: #444;
-    text-align: left; /* Okuma kolayligi icin sola yasli */
+    text-align: left; 
     margin-bottom: 40px;
 }
 
@@ -350,4 +349,5 @@ footer {
     }
 
 }
+
 
