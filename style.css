@@ -1,9 +1,9 @@
-
+/* ------genelolarak------- */
 :root {
-    --bg-color: #f5f5f7; 
-    --text-main: #1d1d1f;
-    --text-light: #86868b;
-    --card-bg: #ffffff;
+    --bg-color: #f5f5f7; /* beyaz */
+    --text-main: #1d1d1f; /* mavili siyaha yakın gri */
+    --text-light: #86868b; /* mavili beyaza yakın gri */
+    --card-bg: #ffffff; /* bembeyaz */
 }
 
 body {
@@ -15,14 +15,14 @@ body {
     line-height: 1.6;
 }
 
-
+/* navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,7 +59,7 @@ body {
     color: #000;
 }
 
-
+/* wellcum grasiyas */
 .hero-section {
     text-align: center;
     padding: 100px 20px 60px 20px;
@@ -101,7 +101,7 @@ body {
     transform: scale(1.1);
 }
 
-
+/* ------- galeri */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -109,7 +109,7 @@ body {
     padding: 20px 8% 100px 8%;
 }
 
-
+/* kartlar */
 .card {
     background: var(--card-bg);
     border-radius: 0;
@@ -124,7 +124,7 @@ body {
 }
 
 .card-image {
-    height: 350px; 
+    height: 350px;
     overflow: hidden;
     position: relative;
 }
@@ -134,12 +134,12 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
-    filter: grayscale(20%); 
+    filter: grayscale(20%);
 }
 
 .card:hover .card-image img {
     transform: scale(1.05);
-    filter: grayscale(0%); 
+    filter: grayscale(0%);
 }
 
 .card-content {
@@ -170,7 +170,7 @@ body {
     line-height: 1.7;
 }
 
-
+/* footer */
 footer {
     text-align: center;
     padding: 40px;
@@ -180,20 +180,7 @@ footer {
     letter-spacing: 1px;
 }
 
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-    .gallery-grid {
-        padding: 20px;
-        gap: 30px;
-    }
-}
+/*derbar page*/
 .about-container {
     max-width: 900px;
     margin: 50px auto;
@@ -255,15 +242,7 @@ footer {
     letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .about-image {
-        height: 300px;
-        width: 100%;
-
+/* -------postlar------- */
 .post-container {
     max-width: 800px;
     margin: 0 auto;
@@ -273,7 +252,7 @@ footer {
 
 .post-header {
     width: 100%;
-    height: 500px; 
+    height: 500px;
     overflow: hidden;
 }
 
@@ -318,7 +297,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.9;
     color: #444;
-    text-align: left; 
+    text-align: left;
     margin-bottom: 40px;
 }
 
@@ -341,13 +320,32 @@ footer {
     border-color: #000;
 }
 
+/* --- mobil için --- */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .gallery-grid {
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    /* mobilde derbarpage */
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about-image {
+        height: 300px;
+        width: 100%;
+    }
+
+    /* mobilde postlar */
     .post-header { height: 300px; }
     .post-content { margin-top: 0; box-shadow: none; }
     .post-title { font-size: 1.8rem; }
 }
-    }
-
-}
-
-
