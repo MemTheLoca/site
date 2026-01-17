@@ -1,6 +1,6 @@
-/* --- GENEL AYARLAR --- */
+
 :root {
-    --bg-color: #f5f5f7; /* Apple beyazi gibi */
+    --bg-color: #f5f5f7; 
     --text-main: #1d1d1f;
     --text-light: #86868b;
     --card-bg: #ffffff;
@@ -15,14 +15,14 @@ body {
     line-height: 1.6;
 }
 
-/* --- MENU TASARIMI --- */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Buzlu cam efekti sadece menude */
+    backdrop-filter: blur(10px); 
     position: sticky;
     top: 0;
     z-index: 100;
@@ -59,7 +59,7 @@ body {
     color: #000;
 }
 
-/* --- HERO (GIRIS) --- */
+
 .hero-section {
     text-align: center;
     padding: 100px 20px 60px 20px;
@@ -101,7 +101,7 @@ body {
     transform: scale(1.1);
 }
 
-/* --- GALERI IZGARASI --- */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -109,10 +109,10 @@ body {
     padding: 20px 8% 100px 8%;
 }
 
-/* --- KART STILI --- */
+
 .card {
     background: var(--card-bg);
-    border-radius: 0; /* Keskin koseler */
+    border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.03);
@@ -124,7 +124,7 @@ body {
 }
 
 .card-image {
-    height: 350px; /* Uzun, poster gibi resimler */
+    height: 350px; 
     overflow: hidden;
     position: relative;
 }
@@ -134,12 +134,12 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
-    filter: grayscale(20%); /* Hafif siyah beyaz tonu */
+    filter: grayscale(20%); 
 }
 
 .card:hover .card-image img {
     transform: scale(1.05);
-    filter: grayscale(0%); /* Ustune gelince renklenir */
+    filter: grayscale(0%); 
 }
 
 .card-content {
@@ -170,7 +170,7 @@ body {
     line-height: 1.7;
 }
 
-/* --- ALT BILGI (FOOTER) --- */
+
 footer {
     text-align: center;
     padding: 40px;
@@ -180,7 +180,7 @@ footer {
     letter-spacing: 1px;
 }
 
-/* --- MOBIL UYUMLULUK --- */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -263,6 +263,91 @@ footer {
     .about-image {
         height: 300px;
         width: 100%;
+
+        /* --- POST DETAY SAYFASI (PARVEKIRIN) --- */
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding-bottom: 60px;
+}
+
+.post-header {
+    width: 100%;
+    height: 500px; /* Buyuk kapak resmi */
+    overflow: hidden;
+}
+
+.post-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 40px 20px;
+    max-width: 650px;
+    margin: -60px auto 0 auto; /* Resmi biraz yukari bindirir */
+    background: #fff;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.post-category {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.post-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #000;
+    margin: 10px 0 10px 0;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #bbb;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.post-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #444;
+    text-align: left; /* Okuma kolayligi icin sola yasli */
+    margin-bottom: 40px;
+}
+
+.post-text p {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+@media (max-width: 768px) {
+    .post-header { height: 300px; }
+    .post-content { margin-top: 0; box-shadow: none; }
+    .post-title { font-size: 1.8rem; }
+}
     }
 
 }
+
