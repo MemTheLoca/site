@@ -1,8 +1,8 @@
 /* ------genelolarak------- */
 :root {
-    --bg-color: #f5f5f7; /* beyaz */
-    --text-main: #1d1d1f; /* mavili siyaha yakın gri */
-    --text-light: #86868b; /* mavili beyaza yakın gri */
+    --bg-color: #f5f5f7; /* birazcık çok az kapalı beyaz */
+    --text-main: #86868b; /* mavili beyaza yakın gri */
+    --text-light: #1d1d1f; /* mavili siyaha yakın gri */
     --card-bg: #ffffff; /* bembeyaz */
 }
 
@@ -349,3 +349,4 @@ footer {
     .post-content { margin-top: 0; box-shadow: none; }
     .post-title { font-size: 1.8rem; }
 }
+
