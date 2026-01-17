@@ -1,9 +1,11 @@
-/* ------genelolarak------- */
+/* ------- genel olaraktan böyle */
 :root {
-    --bg-color: #f5f5f7; /* birazcık çok az kapalı beyaz */
-    --text-main: #86868b; /* mavili beyaza yakın gri */
-    --text-light: #1d1d1f; /* mavili siyaha yakın gri */
-    --card-bg: #ffffff; /* bembeyaz */
+    --bg-color: #050505;      /* simsiyah */
+    --text-main: #e5e5e5;     /* değişik beyaz */
+    --text-light: #a1a1a6;    /* gümüşümsü gri */
+    --card-bg: #141414;       /* siyahımsı gri */
+    --border-color: #333333;  /* koyu gri */
+    --accent-color: #ffffff;  /* bembeyaz */
 }
 
 body {
@@ -21,12 +23,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 8%;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: rgba(10, 10, 10, 0.85); 
+    backdrop-filter: blur(12px); /
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -34,7 +36,7 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #000;
+    color: var(--text-main);
 }
 
 .nav-links {
@@ -56,10 +58,10 @@ body {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #000;
+    color: var(--accent-color);
 }
 
-/* wellcum grasiyas */
+/* böyle de taskali */
 .hero-section {
     text-align: center;
     padding: 100px 20px 60px 20px;
@@ -71,37 +73,37 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     margin: 0 0 15px 0;
-    color: #000;
+    color: var(--text-main);
     font-weight: 400;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text-light);
     font-style: italic;
     margin-bottom: 25px;
 }
 
 .description {
     font-size: 1rem;
-    color: #444;
+    color: #888; /* gri */
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
 .social-icons a {
     font-size: 1.3rem;
-    color: #333;
+    color: var(--text-light);
     margin: 0 12px;
     transition: all 0.3s;
 }
 
 .social-icons a:hover {
-    color: #000;
+    color: var(--accent-color);
     transform: scale(1.1);
 }
 
-/* ------- galeri */
+/* galeri--------- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -109,24 +111,26 @@ body {
     padding: 20px 8% 100px 8%;
 }
 
-/* kartlar */
+/* kartlar---------- */
 .card {
     background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 0;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: #555; /* grimsi gri */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
 .card-image {
     height: 350px;
     overflow: hidden;
     position: relative;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .card-image img {
@@ -134,12 +138,12 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
-    filter: grayscale(20%);
+    filter: grayscale(40%) brightness(0.8); 
 }
 
 .card:hover .card-image img {
     transform: scale(1.05);
-    filter: grayscale(0%);
+    filter: grayscale(0%) brightness(1); 
 }
 
 .card-content {
@@ -151,7 +155,7 @@ body {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #999;
+    color: #666;
     display: block;
     margin-bottom: 12px;
 }
@@ -160,13 +164,13 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 1.6rem;
     margin: 5px 0 15px 0;
-    color: #000;
+    color: var(--text-main);
     font-weight: 400;
 }
 
 .card-content p {
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
     line-height: 1.7;
 }
 
@@ -174,13 +178,14 @@ body {
 footer {
     text-align: center;
     padding: 40px;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--border-color);
     font-size: 0.8rem;
-    color: #aaa;
+    color: #555;
     letter-spacing: 1px;
+    background-color: #080808;
 }
 
-/*derbar page*/
+/* derbarpage */
 .about-container {
     max-width: 900px;
     margin: 50px auto;
@@ -194,18 +199,19 @@ footer {
     flex: 1;
     height: 500px;
     overflow: hidden;
+    border: 1px solid var(--border-color);
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(0.8);
     transition: filter 0.5s ease;
 }
 
 .about-image:hover img {
-    filter: grayscale(0%);
+    filter: grayscale(0%) brightness(1);
 }
 
 .about-text {
@@ -215,13 +221,13 @@ footer {
 .about-text h1 {
     font-family: 'Cinzel', serif;
     font-size: 2.5rem;
-    color: #000;
+    color: var(--text-main);
     margin-bottom: 20px;
 }
 
 .about-text p {
     font-size: 1.05rem;
-    color: #555;
+    color: #999;
     margin-bottom: 20px;
     line-height: 1.8;
 }
@@ -229,7 +235,7 @@ footer {
 .about-text .intro {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: var(--text-main);
     font-style: italic;
 }
 
@@ -238,15 +244,15 @@ footer {
     font-size: 1.5rem;
     margin-top: 40px;
     text-align: right;
-    color: #000;
+    color: var(--text-main);
     letter-spacing: 2px;
 }
 
-/* -------postlar------- */
+/* post-------------- */
 .post-container {
     max-width: 800px;
     margin: 0 auto;
-    background: #fff;
+    background: var(--bg-color);
     padding-bottom: 60px;
 }
 
@@ -260,35 +266,37 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.9);
 }
 
 .post-content {
     padding: 40px 20px;
     max-width: 650px;
     margin: -60px auto 0 auto;
-    background: #fff;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     position: relative;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .post-category {
     font-size: 0.8rem;
     letter-spacing: 2px;
-    color: #999;
+    color: #666;
     text-transform: uppercase;
 }
 
 .post-title {
     font-family: 'Cinzel', serif;
     font-size: 2.2rem;
-    color: #000;
+    color: var(--text-main);
     margin: 10px 0 10px 0;
 }
 
 .post-date {
     font-size: 0.9rem;
-    color: #bbb;
+    color: #666;
     display: block;
     margin-bottom: 30px;
 }
@@ -296,7 +304,7 @@ footer {
 .post-text {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: #444;
+    color: #bbb;
     text-align: left;
     margin-bottom: 40px;
 }
@@ -307,20 +315,20 @@ footer {
 
 .back-link {
     text-decoration: none;
-    color: #000;
+    color: var(--text-main);
     font-weight: bold;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     padding: 10px 20px;
     transition: all 0.3s;
 }
 
 .back-link:hover {
-    background: #000;
-    color: #fff;
-    border-color: #000;
+    background: var(--text-main);
+    color: var(--bg-color);
+    border-color: var(--text-main);
 }
 
-/* --- mobil için --- */
+/* mobil için */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -349,4 +357,3 @@ footer {
     .post-content { margin-top: 0; box-shadow: none; }
     .post-title { font-size: 1.8rem; }
 }
-
