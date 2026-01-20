@@ -44,8 +44,7 @@
         <p style="color:#666; text-align:center; width:100%;">Derdixe...</p>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
         const container = document.getElementById('feed-container');
         
@@ -53,32 +52,29 @@
 
         Papa.parse(sheet_url, {
             download: true,
-            header: false, 
+            header: false,
             complete: function(results) {
-                
-                
                 container.innerHTML = "";
-
-               
+                
                 let data = results.data.reverse();
-
-                data.forEach(row => {
-                  
+                
+                data.forEach((row, index) => {
+                    
                     if(row.length < 5 || !row[1]) return;
 
-                    let category = row[0]; // A: katagor
-                    let title = row[1];    // B: abigtitle
-                    let date = row[2];     // C: Tarîx
-                    let image = row[3];    // D: Photo
-                    let desc = row[4];     // E: des
-                    let link = row[5] ? row[5] : "#"; // F: Link (Varsa al, yoksa # koy)
+                    let category = row[0];
+                    let title = row[1];
+                    let date = row[2];
+                    let image = row[3];
+                    let desc = row[4].substring(0, 100) + "..."; 
+                    
+                    let link = `read.html?id=${index}`;
 
-                    // HTML Kartini Olustur
                     const htmlContent = `
                         <article class="card">
                             <div class="card-image">
                                 <a href="${link}">
-                                    <img src="${image}" alt="${title}" onerror="this.src='https://via.placeholder.com/800x400?text=Wêne+Tune'">
+                                    <img src="${image}" alt="${title}" onerror="this.src='https://via.placeholder.com/800x400'">
                                 </a>
                             </div>
                             <div class="card-content">
@@ -98,8 +94,6 @@
             }
         });
     </script>
-        
-        
     </main>
 
     <footer>
@@ -109,6 +103,7 @@
 </body>
 
 </html>
+
 
 
 
